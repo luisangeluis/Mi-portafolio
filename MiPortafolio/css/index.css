@@ -1,0 +1,8 @@
+
+.jumbotron{
+    
+    background-color: aliceblue;
+}
+.jumbotron .container{
+    min-height: 300px;
+}
