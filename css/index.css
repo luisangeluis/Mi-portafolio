@@ -1,8 +1,9 @@
 
 .jumbotron{
     
-    background-color: aliceblue;
 }
 .jumbotron .container{
     min-height: 400px;
+    /* background-color: aliceblue; */
+
 }
