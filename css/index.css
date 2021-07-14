@@ -1,9 +1,13 @@
 
+.navbar{
+    background-color: #5A885B;
+}
 .jumbotron{
-    
 }
 .jumbotron .container{
     min-height: 400px;
-    /* background-color: aliceblue; */
+    background-color: #5A885B;
 
+
+    
 }
