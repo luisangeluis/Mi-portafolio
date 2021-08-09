@@ -39,20 +39,32 @@
     transition: all .4s ease-in-out;
 } */
     
-    .card {
+    /* .proyectos.card {
         border: 1px solid #23578B;
-        overflow: hidden;
-    }
+        overflow:hidden
+        
+    } */
     
-    .card:hover .card-img-top {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-        transition: all .4s ease-in-out;
-    }
     
-    .card:hover {
+    
+    
+    /* .proyectos .card:hover {
         border: 2px solid #23578B;
         -webkit-transform: scale(1.05);
         transform: scale(1.05);
         transition: all .3s ease-in-out;
+        filter: opacity(.9);
+    } */
+
+    .contenedor-hidden{
+        overflow:hidden
     }
+    .contenedor-hidden:hover .card{
+        -webkit-transform:scale(1.1);
+        transform:scale(1.1);
+        transition: all .3s ease-in-out;
+        
+    }
+
+    /*skills*/
+
