@@ -16,29 +16,29 @@
 <body>
 
     <main>
-        <nav class="navbar navbar-expand-lg navbar-light ">
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#">Tu nombre Desarrollador Web</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#jumbotron">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Proyectos</a>
+                            <a class="nav-link" href="#proyectos">Proyectos</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Skillset</a>
+                            <a class="nav-link " href="#skills" tabindex="-1" aria-disabled="true">Skillset</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Experience</a>
+                            <a class="nav-link " href="#experiencia" tabindex="-1" aria-disabled="true">Experience</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                            <a class="nav-link " href="#contacto" tabindex="-1" aria-disabled="true">Contact</a>
                         </li>
                     </ul>
 
@@ -46,139 +46,144 @@
             </div>
         </nav>
 
-        <!--jumbotron-->
-        <div class="jumbotron mt-3 mt-lg-4">
-            <div class="container  d-flex align-items-center justify-content-center">
-                <div class="row">
-                    <div class="col-md-4 ">
-                        <!-- <div class="row">
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+
+            <!--jumbotron-->
+            <div class="jumbotron mt-3 mt-lg-4 " id="jumbotron">
+                <div class="container  d-flex align-items-center justify-content-center">
+                    <div class="row">
+                        <div class="col-md-4 ">
+                            <!-- <div class="row">
                                 <div class="col-9 col-md-8 col-lg-12 m-auto">-->
+                            <div class="contenedor-hidden">
+                                <div class="card m-md-3 m-3">
+                                    <img src="/assets/img/imgDesarrollador.jpg" class="img-fluid p-lg-3 p-2" alt="Mi foto">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Luis Zepeda Desarrollador</h5>
+                                        <p class="card-text">Mi informacion</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- </div>
+    
+                            </div>-->
+                        </div>
+                        <div class="col-md-8  align-self-center">
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, commodi repellendus, itaque soluta natus hic architecto accusamus ipsa libero maiores ab saepe excepturi dolor repellat laboriosam voluptate esse adipisci
+                                        at assumenda non ipsum deleniti molestiae? Sapiente, officia! Assumenda, blanditiis similique.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!--Projects-->
+            <div class="proyectos container my-5" id="proyectos">
+                <h2 class="mb-3">PROYECTOS</h2>
+                <div class="row text-center">
+                    <div class="col-lg-4 col-md-6 mb-3">
                         <div class="contenedor-hidden">
-                            <div class="card m-md-3 m-3">
-                                <img src="/assets/img/imgDesarrollador.jpg" class="img-fluid p-lg-3 p-2" alt="Mi foto">
+                            <div class="card my-2">
+                                <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title">Luis Zepeda Desarrollador</h5>
-                                    <p class="card-text">Mi informacion</p>
+                                    <h5 class="card-title">Proyecto 1</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Ir al proyecto</a>
+                                    <a href="#" class="btn btn-primary">Acerca de</a>
+
                                 </div>
                             </div>
                         </div>
 
-                        <!-- </div>
-    
-                            </div>-->
                     </div>
-                    <div class="col-md-8  align-self-center">
-                        <div class="row">
-                            <div class="col-lg-12 text-center">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, commodi repellendus, itaque soluta natus hic architecto accusamus ipsa libero maiores ab saepe excepturi dolor repellat laboriosam voluptate esse adipisci
-                                    at assumenda non ipsum deleniti molestiae? Sapiente, officia! Assumenda, blanditiis similique.
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-        <!--Projects-->
-        <div class="proyectos container my-5">
-            <h2 class="mb-3">PROYECTOS</h2>
-            <div class="row text-center">
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="contenedor-hidden">
-                        <div class="card my-2" style="">
-                            <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Proyecto 1</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Ir al proyecto</a>
-                                <a href="#" class="btn btn-primary">Acerca de</a>
-
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="contenedor-hidden">
+                            <div class="card my-2">
+                                <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Proyecto 2</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Ir al proyecto</a>
+                                    <a href="#" class="btn btn-primary">Acerca de</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="contenedor-hidden">
-                        <div class="card my-2" style="">
-                            <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Proyecto 2</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Ir al proyecto</a>
-                                <a href="#" class="btn btn-primary">Acerca de</a>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="contenedor-hidden">
+                            <div class="card my-2">
+                                <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Proyecto 3</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-primary">Ir al proyecto</a>
+                                    <a href="#" class="btn btn-primary">Acerca de</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                </div>
-                <div class="col-lg-4 col-md-6 mb-3">
-                    <div class="contenedor-hidden">
-                        <div class="card my-2" style="">
-                            <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Proyecto 3</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Ir al proyecto</a>
-                                <a href="#" class="btn btn-primary">Acerca de</a>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
             </div>
-        </div>
 
-        <!--skills-->
-        <div class="container">
-            <div class="skills">
-                <h2>SKILLS</h2>
-                <div class="row row-cols-2   row-cols-lg-3 g-4 mb-3">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="./assets/img/php.png" class=" circle-img fit-img" alt="imagen-php">
+            <!--skills-->
+            <div class="container" id="skills">
+                <div class="skills">
+                    <h2>SKILLS</h2>
+                    <div class="row row-cols-2   row-cols-lg-3 g-4 mb-3">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="./assets/img/php.png" class=" circle-img fit-img" alt="imagen-php">
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="./assets/img/react_logo.png" class="img-fluid circle-img " alt="imagen-php">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="./assets/img/react_logo.png" class="img-fluid circle-img " alt="imagen-php">
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col ">
-                        <div class="card h-100">
-                            <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
+                        <div class="col ">
+                            <div class="card h-100">
+                                <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
 
+                            </div>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="./assets/img/php.png" class="img-fluid circle-img" alt="imagen-php">
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
 
     </main>
     <!-- <h1>Mi portafolio</h1> -->
