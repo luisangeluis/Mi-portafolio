@@ -1,14 +1,23 @@
 const menuPrincipal = document.querySelector('#menu-principal_ul');
+const optionsMainList = Array.from(menuPrincipal.children);
 
-console.log(menuPrincipal.Length)
-console.log(menuPrincipal.children);
+menuPrincipal.addEventListener('click', (e) => {
+    let elemento = e.target;
 
-// menuPrincipal.children.forEach(element => {
-//     console.log(element);
-// });
+    // optionsMainList.forEach(option => {
+    //     // console.log(option.children[0].classList.remove('active'));
+    //     // if (option.children[0].classList.contains('active')) {
+    //     //     option.children[0].classList.remove('active')
+    //     // }
 
-const array = Array.from(menuPrincipal.children);
+    // })
 
-array.forEach(element => {
-    console.log(element);
+    optionsMainList.map(option => {
+        if (option.children[0].classList.contains('active')) {
+            option.children[0].classList.remove('active')
+        }
+    })
+
+    elemento.classList.add('active');
+
 })
