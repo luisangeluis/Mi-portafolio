@@ -14,21 +14,44 @@ menuPrincipal.addEventListener('click', (e) => {
 })
 const SectionsGroup = document.querySelector('.scrollspy-example');
 
-addEventListener('scroll',(e)=>{
 
-    let seccionesPrincipales = [...SectionsGroup.children]
-    console.log(seccionesPrincipales);
+// addEventListener('scroll',(e)=>{
 
-    for(i=0;i<seccionesPrincipales.length;i++){
-        if(seccionesPrincipales[i].scrollTop===0){
-            console.log(seccionesPrincipales[i].id);
+//     let seccionesPrincipales = [...SectionsGroup.children]
+//     console.log(seccionesPrincipales);
 
-            console.log(seccionesPrincipales[i].scrollTop);
-        }
-    }
+//     for(i=0;i<seccionesPrincipales.length;i++){
+//         if(seccionesPrincipales[i].scrollTop===0){
+//             console.log(seccionesPrincipales[i].id);
+
+//             console.log(seccionesPrincipales[i].scrollTop);
+//         }
+//     }
         
     
-})
+// })
+
+addEventListener('scroll',(e)=>{
+    // console.log(document.documentElement.scrollTop);
+    //scrollTop muestra en este caso la altura del scroll de la pagina
+    let scrollTopDocumento = document.documentElement.scrollTop;
+
+    console.log("altura documento"+scrollTopDocumento);
+    //Devuelve el valor de la altura del elemento
+    console.log("altura elemento"+document.querySelector('.experiencie').offsetTop);
+
+    if(scrollTopDocumento > document.querySelector('.animado').offsetTop-500){
+        document.querySelector('.animado').style.opacity ='1';
+        document.querySelector('.animado').classList.add('mostrarArriba');
+        
+        
+    }
+
+    
+
+
+
+});
 
 
 
