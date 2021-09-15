@@ -12,46 +12,48 @@ menuPrincipal.addEventListener('click', (e) => {
     
 
 })
-const SectionsGroup = document.querySelector('.scrollspy-example');
 
+//Efecto suave hacia arriba de los elementos 
+const elementosAnimados = document.querySelectorAll('.animado');
+addEventListener('scroll',()=>{
+    scrollTopPagina = document.documentElement.scrollTop;
 
-// addEventListener('scroll',(e)=>{
+    // console.log(scrollTopPagina);
+    // console.log(typeof elementosAnimados);
 
-//     let seccionesPrincipales = [...SectionsGroup.children]
-//     console.log(seccionesPrincipales);
-
-//     for(i=0;i<seccionesPrincipales.length;i++){
-//         if(seccionesPrincipales[i].scrollTop===0){
-//             console.log(seccionesPrincipales[i].id);
-
-//             console.log(seccionesPrincipales[i].scrollTop);
-//         }
-//     }
-        
+    arrayAnimados = Array.from(elementosAnimados);
     
-// })
+    arrayAnimados.forEach((element) => {
+        // console.log(element);
 
-addEventListener('scroll',(e)=>{
-    // console.log(document.documentElement.scrollTop);
-    //scrollTop muestra en este caso la altura del scroll de la pagina
-    let scrollTopDocumento = document.documentElement.scrollTop;
+        if(scrollTopPagina > element.offsetTop-500){
+            element.style.opacity='1';
+            element.classList.add('mostrarArriba');
+        }
+    })
+})
 
-    console.log("altura documento"+scrollTopDocumento);
-    //Devuelve el valor de la altura del elemento
-    console.log("altura elemento"+document.querySelector('.experiencie').offsetTop);
+//Agregar clase active a los elementos del menu principal en scroll
+const mainMenuOptions = document.querySelector('#menu-principal_ul');
+arrayOptions = Array.from(mainMenuOptions.children);
 
-    if(scrollTopDocumento > document.querySelector('.animado').offsetTop-500){
-        document.querySelector('.animado').style.opacity ='1';
-        document.querySelector('.animado').classList.add('mostrarArriba');
-        
-        
+const mainSections = document.querySelector('.scrollspy-example');
+const arraySections = Array.from(mainSections.children);
+console.log(arraySections);
+// console.log(arrayOptions);
+
+addEventListener('scroll',()=>{
+    // arrayOptions[1].lastElementChild.classList.add('active');
+    scrollTopPagina = document.documentElement.scrollTop;
+
+    for(let i=0; i<arraySections.length;i++){
+        if(scrollTopPagina>arraySections[i].offsetTop-250){
+            arrayOptions.forEach(element=>element.firstElementChild.classList.remove('active'))
+            arrayOptions[i].firstElementChild.classList.add('active');
+        }
     }
+})
 
-    
-
-
-
-});
 
 
 
