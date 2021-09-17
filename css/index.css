@@ -21,6 +21,10 @@
         cursor: pointer;
         color: white !important;
     }
+    #menu-principal_ul .nav-link{
+        color: white;
+        transition: all .18s ease-in;
+    }
     /*Panel princial*/
     
     .jumbotron .container {
@@ -67,17 +71,17 @@
     
     .animado{
         opacity: 0;
-        transition: all .7s;
+        transition: all .2s;
 
     }
 
     .mostrarArriba{
-        animation: mostrarArriba 1.5s;
+        animation: mostrarArriba 1.8s;
     }
 
     @keyframes mostrarArriba{
         0%{
-            transform: translateY(40px);
+            transform: translateY(50px);
         }
         100%{
             transform: translateY(0);
