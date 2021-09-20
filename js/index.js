@@ -6,6 +6,7 @@ menuPrincipal.addEventListener('click', (e) => {
     // console.log(e.target);
     if (e.target && e.target.tagName === 'A') {
         let elemento = e.target;
+        let scrollTopPagina = document.documentElement.scrollTop;
 
         optionsMainList.forEach(element => {
             element.children[0].classList.remove('active')
@@ -13,13 +14,11 @@ menuPrincipal.addEventListener('click', (e) => {
 
         elemento.classList.add('active');
 
+        
+
     }
-    // optionsMainList.forEach(element => {
-    //     element.children[0].classList.remove('active')
-    // });
-    // elemento.classList.add('active');
 
-
+    
 })
 //Agregar clase active a los elementos del menu principal en scroll
 const mainMenuOptions = document.querySelector('#menu-principal_ul');
@@ -62,6 +61,7 @@ addEventListener('scroll', () => {
         }
     })
 })
+
 
 
 

@@ -5,8 +5,12 @@
         background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; */
         background-image: url("/assets/patterns/prism/prism.png");
         /* padding-top: 55px; */
+        
     }
-    
+    html{
+        scroll-behavior:smooth;
+        
+    }
     * {
         margin: 0;
         padding: 0;
