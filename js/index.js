@@ -20,6 +20,7 @@ menuPrincipal.addEventListener('click', (e) => {
 
     
 })
+
 //Agregar clase active a los elementos del menu principal en scroll
 const mainMenuOptions = document.querySelector('#menu-principal_ul');
 arrayOptions = Array.from(mainMenuOptions.children);
@@ -56,9 +57,33 @@ addEventListener('scroll', () => {
         // console.log(element);
 
         if (scrollTopPagina > element.offsetTop - 300) {
-            element.style.opacity = '1';
+            // element.style.opacity = '1';
             element.classList.add('mostrarArriba');
         }
+
+        if(scrollTopPagina < element.offsetTop-500)
+        {
+            element.classList.remove('mostrarArriba');
+
+        }
+    })
+})
+
+const animadosDos = document.querySelectorAll('.animado-2')
+addEventListener('scroll',()=>{
+    const ArrayAnimadoDos = Array.from(animadosDos);
+    let scrollTopPagina = document.documentElement.scrollTop;
+    
+    ArrayAnimadoDos.forEach( element =>{
+        if(scrollTopPagina > element.offsetTop -300){
+            element.classList.add('mostrar-lado');
+        }
+        if(scrollTopPagina < element.offsetTop-300)
+        {
+            element.classList.remove('mostrar-lado');
+
+        }
+        
     })
 })
 

@@ -71,16 +71,17 @@
         height: 200px;
     }
 
-    /*Experiencie*/
-    
+    /*Clases para animar elementos*/
     .animado{
         opacity: 0;
-        transition: all .2s;
+        transition: all .15s;
 
     }
 
     .mostrarArriba{
-        animation: mostrarArriba 1.8s;
+        animation: mostrarArriba 1s;
+        opacity: 1;
+
     }
 
     @keyframes mostrarArriba{
@@ -89,5 +90,26 @@
         }
         100%{
             transform: translateY(0);
+        }
+    }
+
+    /*Mostrar de lado**/
+    .animado-2{
+        opacity: 0;
+        transition: all .2s;
+ 
+    }
+
+    .mostrar-lado{
+        animation: mostrarLado 1.2s;
+        opacity: 1;
+    }
+
+    @keyframes mostrarLado{
+        0%{
+            transform: translateX(-300px);
+        }
+        100%{
+            transform: translateX(0)
         }
     }
