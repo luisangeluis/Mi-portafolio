@@ -56,7 +56,7 @@ addEventListener('scroll', () => {
     elementosAnimados.forEach((element) => {
         // console.log(element);
 
-        if (scrollTopPagina > element.offsetTop - 300) {
+        if (scrollTopPagina > element.offsetTop - 1000) {
             // element.style.opacity = '1';
             element.classList.add('mostrarArriba');
         }
@@ -75,10 +75,10 @@ addEventListener('scroll',()=>{
     let scrollTopPagina = document.documentElement.scrollTop;
     
     ArrayAnimadoDos.forEach( element =>{
-        if(scrollTopPagina > element.offsetTop -300){
+        if(scrollTopPagina > element.offsetTop -500){
             element.classList.add('mostrar-lado');
         }
-        if(scrollTopPagina < element.offsetTop-300)
+        if(scrollTopPagina < element.offsetTop-500)
         {
             element.classList.remove('mostrar-lado');
 
