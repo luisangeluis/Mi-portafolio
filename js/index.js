@@ -47,6 +47,8 @@ console.log(arraySections);
 // })
 
 
+//Efecto suave hacia arriba y efecto suave hacia la derecha de los elementos al hacer scroll
+
 //Opciones del observador
 options={
     //root:
@@ -57,32 +59,21 @@ options={
 }
 //Callback del observador
 const animadoArriba =(entryes)=>{
-    // entryes.forEach(entry=>{
-    //     // entry.target.classList.remove('mostrarArriba');
 
-    //     if(entry.isIntersecting){
-
-    //         entry.target.classList.add('mostrarArriba')
-    //     }  
-    // })
-    
-
-    // for(let entry of entryes){
-    //     console.log(entry);
-    //     if(entry.isIntersecting){
-    //         entry.target.classList.add('mostrarArriba');
-    //     }
-    // }
-    for(let i =0; i<entryes.length;i++){
-        if(entryes[i].isIntersecting){
-            entryes[i].target.classList.add('mostrarArriba');
-            // arrayOptions[i].children[0].classList.add('active');
-            console.log(i)
+    for(let x =0; x<entryes.length;x++){
+        if(entryes[x].isIntersecting){
+            
+            console.log(entryes[x].target);
+            entryes[x].target.classList.add('mostrarArriba');
+            
+            
 
         }
     }
-    
+
+
 }
+
 
 const animadoDerecha = (entryes)=>{
     entryes.forEach(entry=>{
@@ -92,22 +83,27 @@ const animadoDerecha = (entryes)=>{
         }
     })
 }
-//Efecto suave hacia arriba de los elementos 
+//Efecto suave hacia arriba de los elementos al hacer scroll
 const elementosAnimadoArriba = document.querySelectorAll('.animado');
-//Efecto suave hacia la derecha de los elementos 
+//Efecto suave hacia la derecha de los elementos al hacer scroll
 const itemsAnimadosDerecha = document.querySelectorAll('.animado-2')
 //Se crea el observador para los elementos que se animan hacia arriba
 const observerAnimadoArriba = new IntersectionObserver(animadoArriba,options);
 const observerAnimadoDerecha = new IntersectionObserver(animadoDerecha,options);
 
-elementosAnimadoArriba.forEach(element=>{
-    observerAnimadoArriba.observe(element);
-})
+// elementosAnimadoArriba.forEach(element=>{
+//     observerAnimadoArriba.observe(element);
+// })
 
 itemsAnimadosDerecha.forEach(element=>{
     observerAnimadoDerecha.observe(element);
 })
 
+for(let i = 0; i<elementosAnimadoArriba.length;i++ ){
+
+    observerAnimadoArriba.observe(elementosAnimadoArriba[i]);
+
+}
 
 
 
