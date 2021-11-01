@@ -23,28 +23,33 @@ menuPrincipal.addEventListener('click', (e) => {
 
 //Agregar clase active a los elementos del menu principal en scroll
 const mainMenuOptions = document.querySelector('#menu-principal_ul');
-// arrayOptions = Array.from(mainMenuOptions.children);
-arrayOptions = mainMenuOptions.children;
-
-
+arrayOptions = Array.from(mainMenuOptions.children);
 const mainSections = document.querySelector('.scrollspy-example');
 const arraySections = Array.from(mainSections.children);
 
 console.log(arraySections);
 // console.log(arrayOptions);
 
-// addEventListener('scroll',()=>{
-//     // arrayOptions[1].lastElementChild.classList.add('active');
-//     scrollTopPagina = document.documentElement.scrollTop;
+addEventListener('scroll',()=>{
+    // arrayOptions[1].lastElementChild.classList.add('active');
+    scrollTopPagina = document.documentElement.scrollTop;
+    console.log(scrollTopPagina);
+    for(let i=0; i<arraySections.length;i++){
+        let topSection = arraySections[i].offsetTop;
+        // if(scrollTopPagina>topSection-300){
+        //     arrayOptions.forEach(element=>element.firstElementChild.classList.remove('active'))
+        //     arrayOptions[i].firstElementChild.classList.add('active');
+        // }
 
-//     for(let i=0; i<arraySections.length;i++){
-//         let topSection = arraySections[i].offsetTop;
-//         if(scrollTopPagina>topSection-300){
-//             arrayOptions.forEach(element=>element.firstElementChild.classList.remove('active'))
-//             arrayOptions[i].firstElementChild.classList.add('active');
-//         }
-//     }
-// })
+        console.log(topSection);
+
+        if(scrollTopPagina >= topSection-100){
+            arrayOptions.forEach(element=>element.firstElementChild.classList.remove('active'))
+            arrayOptions[i].firstElementChild.classList.add('active');
+        }
+ 
+    }
+})
 
 
 //Efecto suave hacia arriba y efecto suave hacia la derecha de los elementos al hacer scroll
@@ -53,7 +58,7 @@ console.log(arraySections);
 options={
     //root:
     //rootMargin y threshold nos ayudan a indicar cuando quiero que se dispare el callback
-    rootMargin: '0px'
+    rootMargin: '-100px'
     //threshold = Se lanza el callback cuando el elemento se alcanza a ver al 25% y cuando se está ocultando y queda 25% en este ejemplo
     // threshold:0.25
 }
@@ -63,7 +68,7 @@ const animadoArriba =(entryes)=>{
     for(let x =0; x<entryes.length;x++){
         if(entryes[x].isIntersecting){
             
-            console.log(entryes[x].target);
+            // console.log(entryes[x].target);
             entryes[x].target.classList.add('mostrarArriba');
             
             

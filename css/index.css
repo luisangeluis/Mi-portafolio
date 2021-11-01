@@ -8,7 +8,7 @@
         
     }
     html{
-        scroll-behavior:smooth;
+        /* scroll-behavior:smooth; */
         
     }
     * {
@@ -31,7 +31,7 @@
     }
     /*Panel princial*/
     
-    .jumbotron .container {
+    .jumbotron .container-fluid {
         min-height: 400px;
         background-color: #23578B;
         border-radius: 20px;
@@ -79,7 +79,7 @@
     }
 
     .mostrarArriba{
-        animation: mostrarArriba 1s;
+        animation: mostrarArriba 2s;
         opacity: 1;
 
     }
@@ -101,7 +101,7 @@
     }
 
     .mostrar-lado{
-        animation: mostrarLado 1.2s;
+        animation: mostrarLado 2.2s;
         opacity: 1;
     }
 
