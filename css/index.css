@@ -10,10 +10,7 @@
     .color{
         background-color: red;
     }
-    html{
-        /* scroll-behavior:smooth; */
-        
-    }
+    
     * {
         margin: 0;
         padding: 0;
@@ -65,13 +62,17 @@
     }
     /*skills*/
     
-    .skills .card {
+    .skillset .card {
         background-color: transparent;
+        border: none;
+
     }
     
-    .skills .card img {
-        border: none;
-        height: 200px;
+    .skillset .card img {
+        /* border: none; */
+        height: 150px;
+        max-height: 200px;
+        /* width: 1em; */
     }
 
     /*Clases para animar elementos*/
