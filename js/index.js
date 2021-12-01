@@ -6,19 +6,15 @@ menuPrincipal.addEventListener('click', (e) => {
     // console.log(e.target);
     if (e.target && e.target.tagName === 'A') {
         let elemento = e.target;
-        let scrollTopPagina = document.documentElement.scrollTop;
 
-        optionsMainList.forEach(element => {
-            element.children[0].classList.remove('active')
-        });
+        for (let i = 0; i < optionsMainList.length; i++) {
+            if (optionsMainList[i].firstElementChild.classList.contains('active')) {
+                optionsMainList[i].firstElementChild.classList.remove('active');
+            }
+        }
 
         elemento.classList.add('active');
-
-
-
     }
-
-
 })
 
 //Agregar clase active a los elementos del menu principal en scroll
@@ -27,33 +23,7 @@ arrayOptions = Array.from(mainMenuOptions.children);
 const mainSections = document.querySelector('.scrollspy-example');
 const arraySections = Array.from(mainSections.children);
 
-// console.log(arraySections);
-// console.log(arrayOptions);
-
-// addEventListener('scroll',()=>{
-//     // arrayOptions[1].lastElementChild.classList.add('active');
-//     scrollTopPagina = document.documentElement.scrollTop;
-//     // console.log(scrollTopPagina);
-//     for(let i=0; i<arraySections.length;i++){
-//         let topSection = arraySections[i].offsetTop;
-//         // if(scrollTopPagina>topSection-300){
-//         //     arrayOptions.forEach(element=>element.firstElementChild.classList.remove('active'))
-//         //     arrayOptions[i].firstElementChild.classList.add('active');
-//         // }
-
-//         // console.log(topSection);
-
-//         if(scrollTopPagina >= topSection-200){
-//             arrayOptions.forEach(element=>element.firstElementChild.classList.remove('active'))
-//             arrayOptions[i].firstElementChild.classList.add('active');
-//         }
-
-//     }
-// })
-
-
 //Efecto suave hacia arriba y efecto suave hacia la derecha de los elementos al hacer scroll
-
 //Opciones del observador
 options = {
     //root:
@@ -68,26 +38,24 @@ const animadoArriba = (entryes) => {
     for (let x = 0; x < entryes.length; x++) {
         if (entryes[x].isIntersecting) {
 
-            //CREO QUE ESTE IF IS ESTA DEMAS EN ENTRYES ESTOY CAPTANDO LOS DE CLASE ANIMADO
-            // if (entryes[x].target.classList.contains('animado')) {
+            //aqui se obtiene la clase de las secciones
+            console.log(entryes[x].target.classList[0]);
 
-                //aqui se obtiene la clase de las secciones
-                console.log(entryes[x].target.classList[0]);
+            arrayOptions.forEach(element => {
+                //se obtiene la clase de cada link
+                console.log(element.firstElementChild.textContent.toLowerCase())
 
-                arrayOptions.forEach(element => {
-                    //se obtiene la clase de cada link
-                    console.log(element.firstElementChild.textContent.toLowerCase())
-
-                    if (entryes[x].target.classList[0] == element.firstElementChild.textContent.toLowerCase()) {
-                        console.log('hola');
-                        for (let i = 0; i < arrayOptions.length; i++) {
+                if (entryes[x].target.classList[0] == element.firstElementChild.textContent.toLowerCase()) {
+                    console.log('hola');
+                    for (let i = 0; i < arrayOptions.length; i++) {
+                        if(arrayOptions[i].firstElementChild.classList.contains('active'))
                             arrayOptions[i].firstElementChild.classList.remove('active');
-                        }
-                        element.firstElementChild.classList.add('active');
                     }
-                })
+                    element.firstElementChild.classList.add('active');
+                }
+            })
 
-            // }
+
             console.log(entryes[x]);
             entryes[x].target.classList.add('mostrarArriba');
         }
