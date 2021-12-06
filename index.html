@@ -52,12 +52,10 @@
         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example"
             tabindex="0">
             <!--jumbotron-->
-            <div class="jumbotron animado mt-3 mt-lg-5 mb-3 " id="jumbotron">
-                <div class="container-fluid d-flex align-items-center justify-content-center">
+            <div class="jumbotron animado-2 mt-3 mt-lg-5" id="jumbotron">
+                <div class="container d-flex align-items-center justify-content-center" >
                     <div class="row">
                         <div class="col-md-4 ">
-                            <!-- <div class="row">
-                                <div class="col-9 col-md-8 col-lg-12 m-auto">-->
                             <div class="contenedor-hidden">
                                 <div class="card m-md-3 m-3">
                                     <img src="/assets/img/imgDesarrollador.jpg" class="img-fluid p-lg-3 p-2"
@@ -92,11 +90,11 @@
 
             </div>
             <!--Projects-->
-            <div class="proyectos animado mb-3 mb-lg-5 " id="proyectos">
+            <div class="proyectos animado-2" id="proyectos">
                 <div class="container ">
-                    <h2 class="">PROYECTOS</h2>
+                    <h2 class="" style="padding-top: 2.1em;">PROYECTOS</h2>
                     <div class="row text-center">
-                        <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="col-lg-4 col-md-6">
                             <div class="contenedor-hidden">
                                 <div class="card my-2">
                                     <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
@@ -113,7 +111,7 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="col-lg-4 col-md-6">
                             <div class="contenedor-hidden">
                                 <div class="card my-2">
                                     <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
@@ -129,7 +127,7 @@
                             </div>
 
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-3">
+                        <div class="col-lg-4 col-md-6">
                             <div class="contenedor-hidden">
                                 <div class="card my-2">
                                     <img src="./assets/img/engranes.png" class="card-img-top" alt="...">
@@ -151,9 +149,9 @@
             </div>
 
             <!--skills-->
-            <div class="skillset animado mb-3 mb-lg-5 " id="skills">
+            <div class="skillset animado-2" id="skills">
                 <div class="container ">
-                    <h2>SKILLS</h2>
+                    <h2 style="padding-top: 2.1em;">SKILLS</h2>
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                         <div class="col">
                             <div class="card h-100">
@@ -198,9 +196,9 @@
                 </div>
             </div>
             <!--Experience-->
-            <div class="experience animado mb-3 mb-lg-5" id="experience">
+            <div class="experience animado-2" id="experience">
                 <div class="container ">
-                    <h2>Experiencie</h2>
+                    <h2 style="padding-top: 2.1em;">Experiencie</h2>
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4  text-center">
                         <div class="col">
                             <div class="card my-2">
@@ -254,9 +252,9 @@
                 </div>
             </div>
             <!--Form de contacto-->
-            <div class="contact animado form mb-3 mb-lg-5" id="contact">
+            <div class="contact animado-2 form" id="contact">
                 <div class="container ">
-                    <div class="row justify-content-center ">
+                    <div class="row justify-content-center"style="padding-top: 2.1em;">
                         
                         <div class="col-lg-6">
                                 <form class="bg-dark p-3 p-lg-5 text-white">
@@ -288,7 +286,7 @@
    <!--JQUERY-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--Efecto suave a la navegacion de la pagina-->
-    <!-- <script>
+    <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links
             $("a").on('click', function (event) {
@@ -305,7 +303,7 @@
                     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top
-                    }, 800, function () {
+                    }, 500, function () {
 
                         // Add hash (#) to URL when done scrolling (default click behavior)
                         window.location.hash = hash;
@@ -313,7 +311,7 @@
                 } // End if
             });
         });
-    </script> -->
+    </script>
     <!--JS personalizado-->
     <script src="./js/index.js"></script>
 </body>

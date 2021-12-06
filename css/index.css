@@ -31,7 +31,7 @@
     }
     /*Panel princial*/
     
-    .jumbotron .container-fluid {
+    .jumbotron .container {
         min-height: 400px;
         background-color: #23578B;
         border-radius: 20px;
