@@ -32,10 +32,11 @@
     /*Panel princial*/
     
     .jumbotron .container {
-        min-height: 400px;
+        min-height: 700px;
+        box-sizing: border-box;
         background-color: #23578B;
         border-radius: 20px;
-        position: relative;
+        /* position: relative; */
     }
     /*Contenedor hidden */
     
@@ -101,7 +102,7 @@
     .animado-2{
         opacity: 0;
         transition: all .2s;
- 
+        
     }
 
     .mostrar-lado{
