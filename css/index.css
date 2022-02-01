@@ -13,7 +13,7 @@
     }
 
     .scrollspy-example > div{
-        min-height: 85vh;
+        min-height: 100vh;
         /* min-height: 00px; */
         padding: .5em .2em;
         display: flex;
@@ -78,7 +78,7 @@
     .skillset .card img {
         /* border: none; */
         height: 150px;
-        max-height: 200px;
+        max-height: 150px;
         /* width: 1em; */
     }
 
