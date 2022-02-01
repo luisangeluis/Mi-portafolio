@@ -36,6 +36,7 @@ options = {
     // rootMargin: '-35% 0%',  
     rootMargin: '-50% 0%',  
 
+
     //threshold = Se lanza el callback cuando el elemento se alcanza a ver al 25% y cuando se está ocultando y queda 25% en este ejemplo
     // threshold: 0.3
 }
