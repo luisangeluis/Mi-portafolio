@@ -3,6 +3,10 @@
         padding-top: 2em;
     }
     
+    main {
+        overflow: hidden;
+    }
+    
     .color {
         background-color: red;
     }
@@ -123,6 +127,7 @@
             transform: translateY(0);
         }
     }
+    /*ANIMACIONES*/
     /*Mostrar de lado**/
     
     .animado-2 {
@@ -137,12 +142,32 @@
     
     @keyframes mostrarLado {
         0% {
-            transform: translateX(-300px);
+            transform: translateX(-100px);
         }
         100% {
             transform: translateX(0)
         }
     }
+    
+    .animado-3 {
+        opacity: 0;
+        transition: all .2s;
+    }
+    
+    .mostrar-izquierda {
+        animation: mostrarIzquierda 1s;
+        opacity: 1;
+    }
+    
+    @keyframes mostrarIzquierda {
+        0% {
+            transform: translateX(100px);
+        }
+        100% {
+            transform: translateX(0)
+        }
+    }
+    /*CLASES VARIAS*/
     
     .parrallax {
         background-attachment: fixed;
