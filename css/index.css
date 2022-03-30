@@ -17,13 +17,16 @@
     }
     
     .scrollspy-example>div {
-        min-height: 100vh;
+        /* min-height: 80vh; */
+        min-height: 50vmax;
         /* min-height: 00px; */
         padding: .5em .2em;
+        margin: .1em;
         display: flex;
         justify-content: center;
         align-items: center;
         /* border: red 1px solid; */
+        border: none;
     }
     /*Main navegation*/
     
