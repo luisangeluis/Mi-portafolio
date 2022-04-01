@@ -42,7 +42,7 @@ const callbackSections = entryes => {
             // console.log(option);
 
             arrayOptions.forEach(option => {
-                console.log(option.firstElementChild.name);
+                // console.log(option.firstElementChild.name);
                 if (option.firstElementChild.name == nombreDelElemento) {
                     option.firstElementChild.classList.add('active');
 
@@ -125,3 +125,16 @@ itemsAnimadosDerecha.forEach(element => {
 itemsAnimadosIzquierda.forEach(element => {
     observerAnimadoIzquierda.observe(element);
 });
+
+//EVENTO SCROLL
+
+addEventListener('scroll', e => {
+    // console.log(e);
+    if (e.isTrusted) {
+        document.querySelector('.navbar-principal').classList.add('bg-transparent')
+    }
+    setTimeout((e) => {
+        document.querySelector('.navbar-principal').classList.remove('bg-transparent')
+
+    }, 1200);
+})

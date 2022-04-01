@@ -17,21 +17,21 @@
     }
     
     .scrollspy-example>div {
-        /* min-height: 80vh; */
-        min-height: 50vmax;
-        /* min-height: 00px; */
+        /* min-height: 100vh; */
+        /* min-height: 100vmax; */
+        min-height: 50em;
         padding: .5em .2em;
         margin: .1em;
         display: flex;
         justify-content: center;
         align-items: center;
         /* border: red 1px solid; */
-        border: none;
     }
     /*Main navegation*/
     
     .navbar {
         background-color: #23578B;
+        transition: all 1s;
     }
     
     .nav-item:hover {
@@ -44,6 +44,7 @@
         transition: all .18s ease-in;
     }
     /*Panel princial*/
+    /*Jumbotron*/
     
     .jumbotron {
         background-image: url("/assets/img/react_logo.png");
@@ -57,6 +58,13 @@
         /* position: relative; */
     }
     /*Contenedor hidden */
+    
+    .jumbotron .card:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+        box-shadow: 0px 0px 10px 10px #D8D8D8;
+        transition: all .3s ease-in-out;
+    }
     
     .contenedor-hidden {
         overflow: hidden;
@@ -145,7 +153,8 @@
     
     @keyframes mostrarLado {
         0% {
-            transform: translateX(-100px);
+            transform: translateX(-300px);
+            /* box-shadow: 0px 0px 30px 30px #D8D8D8; */
         }
         100% {
             transform: translateX(0)
@@ -178,4 +187,8 @@
         background-position: 50% 50%;
         background-size: cover;
         background-blend-mode: luminosity;
+    }
+    
+    .bg-transparent {
+        background-color: rgba(7, 7, 110, 0.2);
     }
