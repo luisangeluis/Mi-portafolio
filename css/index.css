@@ -1,6 +1,6 @@
     body {
         background-image: url("/assets/patterns/prism/prism.png");
-        padding-top: 2em;
+        /* padding-top: 2em; */
     }
     
     main {
@@ -17,9 +17,9 @@
     }
     
     .scrollspy-example>div {
-        /* min-height: 100vh; */
+        min-height: 100vh;
         /* min-height: 100vmax; */
-        min-height: 50em;
+        /* min-height: 50em; */
         padding: .5em .2em;
         margin: .1em;
         display: flex;
@@ -31,7 +31,7 @@
     
     .navbar {
         background-color: #23578B;
-        transition: all 1s;
+        transition: all ease-in-out .5s;
     }
     
     .nav-item:hover {
@@ -39,9 +39,21 @@
         color: white !important;
     }
     
+    #menu-principal_ul {
+        box-sizing: border-box;
+        /* background-color: red; */
+    }
+    
     #menu-principal_ul .nav-link {
         color: white;
         transition: all .18s ease-in;
+    }
+    
+    .navbar-nav .nav-item .active {
+        /* background-color: #23578F; */
+        background-color: #34495E;
+        opacity: .9;
+        letter-spacing: 2.5px;
     }
     /*Panel princial*/
     /*Jumbotron*/
@@ -143,11 +155,11 @@
     
     .animado-2 {
         opacity: 0;
-        transition: all .2s;
+        transition: all ease-in-out 1.5s;
     }
     
     .mostrar-lado {
-        animation: mostrarLado 1s;
+        animation: mostrarLado .8s;
         opacity: 1;
     }
     
@@ -163,11 +175,11 @@
     
     .animado-3 {
         opacity: 0;
-        transition: all .2s;
+        transition: all ease-in-out 1.5s;
     }
     
     .mostrar-izquierda {
-        animation: mostrarIzquierda 1s;
+        animation: mostrarIzquierda .8s;
         opacity: 1;
     }
     

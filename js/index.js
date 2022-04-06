@@ -130,11 +130,18 @@ itemsAnimadosIzquierda.forEach(element => {
 
 addEventListener('scroll', e => {
     // console.log(e);
+    const navBarPrincipal = document.querySelector('.navbar-principal');
+    const mainUlChildren = mainMenuOptions.querySelectorAll('.nav-item');
+
     if (e.isTrusted) {
-        document.querySelector('.navbar-principal').classList.add('bg-transparent')
+        navBarPrincipal.classList.add('bg-transparent')
+            // mainUlChildren.classList.add('text-dark');
+        mainUlChildren.forEach(element => element.firstElementChild.classList.add('text-dark'))
     }
     setTimeout((e) => {
-        document.querySelector('.navbar-principal').classList.remove('bg-transparent')
+        navBarPrincipal.classList.remove('bg-transparent')
+        mainUlChildren.forEach(element => element.firstElementChild.classList.remove('text-dark'))
 
-    }, 1200);
+
+    }, 1000);
 })
