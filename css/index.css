@@ -14,11 +14,12 @@
     * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
     
     .scrollspy-example>div {
-        min-height: 100vh;
-        /* min-height: 100vmax; */
+        /* min-height: 90vmin; */
+        min-height: 100vmin;
         /* min-height: 50em; */
         padding: .5em .2em;
         margin: .1em;
@@ -75,7 +76,7 @@
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
         box-shadow: 0px 0px 10px 10px #D8D8D8;
-        transition: all .3s ease-in-out;
+        transition: all .1s ease-in-out;
     }
     
     .contenedor-hidden {
@@ -155,11 +156,11 @@
     
     .animado-2 {
         opacity: 0;
-        transition: all ease-in-out 1.5s;
+        transition: all ease-in .5s;
     }
     
     .mostrar-lado {
-        animation: mostrarLado .8s;
+        animation: mostrarLado 1s;
         opacity: 1;
     }
     
@@ -185,7 +186,7 @@
     
     @keyframes mostrarIzquierda {
         0% {
-            transform: translateX(100px);
+            transform: translateX(-300px);
         }
         100% {
             transform: translateX(0)
