@@ -15,7 +15,7 @@
 
     <script>
         const paragraph = document.querySelector('.texto');
-        const text = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, veritati';
+        const text = 'Lorem ipsum dolor ipsum dolor ipsum dolor ipsum dolor ipsum dolor';
         // console.log(text);
 
         // setInterval(function() {
@@ -25,16 +25,38 @@
         //     }
         // }, 500);
 
+        let i = 0;
 
+        function getNextLetra(pText) {
+            let letra = '';
+            pText.split('');
 
+            if (text[i] !== ' ') {
+                letra = text[i];
+                i++;
 
+            } else {
+                letra = ` ${text[i + 1]}`;
+                console.log('hola');
+                i += 2;
 
+            }
+            return letra;
+        }
 
+        function getMaquinaEscribir(pText) {
+            if (i < text.length) {
+                let nextLetra = getNextLetra(pText);
+                paragraph.textContent += nextLetra;
+            } else {
+                i = 0;
+                paragraph.textContent = '';
+            }
+        }
 
-
-
-        // getNextLetra()
-        // console.log(getNextLetra('hola'));
+        setInterval(function() {
+            getMaquinaEscribir(text);
+        }, 250);
     </script>
 </body>
 
