@@ -71,6 +71,9 @@
         /* position: relative; */
     }
     /*Contenedor hidden */
+    .jumbotron .card .card-text{
+        text-align: justify;
+    }
     
     .jumbotron .card:hover {
         -webkit-transform: scale(1.1);

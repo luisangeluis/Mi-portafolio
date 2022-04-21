@@ -135,7 +135,7 @@ addEventListener('scroll', e => {
 
     if (e.isTrusted) {
         navBarPrincipal.classList.add('bg-transparent')
-            // mainUlChildren.classList.add('text-dark');
+        // mainUlChildren.classList.add('text-dark');
         mainUlChildren.forEach(element => element.firstElementChild.classList.add('text-dark'))
     }
     setTimeout((e) => {
@@ -145,3 +145,61 @@ addEventListener('scroll', e => {
 
     }, 1000);
 })
+
+//Efecto MAQUINA DE ESCRIBIR
+const cbMaquinaEscribir=(entryes)=>{
+    entryes.forEach(entry=>{
+        if(entry.isIntersecting){
+            console.log('0');
+            // getEfectoEscribir(textMaquina, 'Luis Zepeda Desarrollador');
+
+        }
+    })
+    
+}
+const textMaquina = document.querySelectorAll('.maquina-escribir');
+
+
+
+
+const observeMaquinaEscribir = new IntersectionObserver(cbMaquinaEscribir);
+
+textMaquina.forEach(element=>{
+    observeMaquinaEscribir.observe(element);
+})
+
+
+const getNextCharacter = (pText, pIterador) => {
+    const arrayString = pText.split('');
+    let nextCharacter = '';
+
+    if (pIterador < arrayString.length) {
+        nextCharacter = arrayString[pIterador];
+
+    }
+
+    return nextCharacter;
+}
+
+const getEfectoEscribir = (pElement, pText) => {
+    let letra = '';
+    let i = 0;
+
+    t = setInterval(function () {
+        if (i < pText.length) {
+            letra = getNextCharacter(pText, i);
+            console.log(pElement.textContent),
+            pElement.textContent += letra;
+            console.log(letra);
+            i++;
+
+        } else {
+            console.log('entro al else');
+            clearInterval(t);
+
+        }
+    }, 300);
+
+}
+getEfectoEscribir(textMaquina, 'Luis Zepeda Desarrollador');
+
