@@ -149,24 +149,24 @@ addEventListener('scroll', e => {
 //Efecto MAQUINA DE ESCRIBIR
 const cbMaquinaEscribir=(entryes)=>{
     entryes.forEach(entry=>{
+        
         if(entry.isIntersecting){
-            console.log('0');
-            // getEfectoEscribir(textMaquina, 'Luis Zepeda Desarrollador');
-
+            //SE BUGUEA SI NO VEO TODO EL EFECTO
+            
         }
     })
     
 }
-const textMaquina = document.querySelectorAll('.maquina-escribir');
 
-
-
-
+const textMaquina = document.querySelector('.maquina-escribir');
 const observeMaquinaEscribir = new IntersectionObserver(cbMaquinaEscribir);
 
-textMaquina.forEach(element=>{
-    observeMaquinaEscribir.observe(element);
-})
+// textMaquina.forEach(element=>{
+//     observeMaquinaEscribir.observe(element);
+// })
+
+observeMaquinaEscribir.observe(textMaquina);
+
 
 
 const getNextCharacter = (pText, pIterador) => {
@@ -181,25 +181,21 @@ const getNextCharacter = (pText, pIterador) => {
     return nextCharacter;
 }
 
-const getEfectoEscribir = (pElement, pText) => {
-    let letra = '';
-    let i = 0;
+// const getEfectoEscribir = (pElement, pText) => {
+//     let i =0;
+//     pElement.textContent = "";
 
-    t = setInterval(function () {
-        if (i < pText.length) {
-            letra = getNextCharacter(pText, i);
-            console.log(pElement.textContent),
-            pElement.textContent += letra;
-            console.log(letra);
-            i++;
+//     t = setInterval(function(){
+//         if(i<pText.length){
+//             console.log(`valor de : ${i}`);
+//             let nextLetra = getNextCharacter(pText,i);
+//             pElement.textContent += nextLetra;
+//             i++;
+//         }else{
+//             clearInterval(t);
+//         }
+        
+//     },300)
 
-        } else {
-            console.log('entro al else');
-            clearInterval(t);
-
-        }
-    }, 300);
-
-}
-getEfectoEscribir(textMaquina, 'Luis Zepeda Desarrollador');
+// }
 
